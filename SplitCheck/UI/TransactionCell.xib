@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="150" id="bVU-tg-hUG" customClass="TransactionCell">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bVU-tg-hUG" id="2Bd-aI-AAb">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-SH-mav">
+                        <rect key="frame" x="174.5" y="16" width="21.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSX-tF-8xS">
+                        <rect key="frame" x="43" y="60" width="284" height="17"/>
+                        <accessibility key="accessibilityConfiguration" hint="Description"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGr-Vn-bpw">
+                        <rect key="frame" x="43" y="12" width="96.5" height="30"/>
+                        <accessibility key="accessibilityConfiguration" hint="Before Tax"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="U6M-m4-sC6"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-Kz-lN3">
+                        <rect key="frame" x="208" y="95" width="119" height="46.5"/>
+                        <color key="backgroundColor" red="0.90793543781725883" green="0.895080348390206" blue="0.17958993493254685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="contentEdgeInsets" minX="7" minY="5" maxX="7" maxY="5"/>
+                        <state key="normal" title="Send to Venmo">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47n-jo-fmd">
+                        <rect key="frame" x="231" y="11" width="95.5" height="30"/>
+                        <accessibility key="accessibilityConfiguration" hint="Before Tax"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="JJi-xh-HYr"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-O3-cVA">
+                        <rect key="frame" x="16" y="45" width="338" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w8V-Kz-lN3" firstAttribute="top" secondItem="tSX-tF-8xS" secondAttribute="bottom" constant="18" id="3t6-u0-w3r"/>
+                    <constraint firstItem="47n-jo-fmd" firstAttribute="top" secondItem="2Bd-aI-AAb" secondAttribute="top" constant="11" id="44c-3j-nPN"/>
+                    <constraint firstItem="tSX-tF-8xS" firstAttribute="leading" secondItem="2Bd-aI-AAb" secondAttribute="leading" constant="43" id="76f-pQ-3Ct"/>
+                    <constraint firstItem="iGr-Vn-bpw" firstAttribute="top" secondItem="2Bd-aI-AAb" secondAttribute="top" constant="12" id="IWQ-6N-C8v"/>
+                    <constraint firstItem="lbd-SH-mav" firstAttribute="centerX" secondItem="2Bd-aI-AAb" secondAttribute="centerX" id="LcD-sd-aHu"/>
+                    <constraint firstAttribute="trailing" secondItem="47n-jo-fmd" secondAttribute="trailing" constant="43.5" id="b1C-a3-72m"/>
+                    <constraint firstItem="iGr-Vn-bpw" firstAttribute="leading" secondItem="2Bd-aI-AAb" secondAttribute="leading" constant="43" id="bJf-r3-Uxi"/>
+                    <constraint firstItem="47n-jo-fmd" firstAttribute="leading" secondItem="lbd-SH-mav" secondAttribute="trailing" constant="35" id="c3h-WZ-CEU"/>
+                    <constraint firstAttribute="bottom" secondItem="w8V-Kz-lN3" secondAttribute="bottom" constant="8" id="eLB-mA-djP"/>
+                    <constraint firstItem="tSX-tF-8xS" firstAttribute="top" secondItem="47n-jo-fmd" secondAttribute="bottom" constant="19" id="ege-iH-0Of"/>
+                    <constraint firstItem="lbd-SH-mav" firstAttribute="top" secondItem="2Bd-aI-AAb" secondAttribute="top" constant="16" id="pKO-XS-83R"/>
+                    <constraint firstItem="lbd-SH-mav" firstAttribute="leading" secondItem="iGr-Vn-bpw" secondAttribute="trailing" constant="35" id="pYI-v5-EdJ"/>
+                    <constraint firstItem="tSX-tF-8xS" firstAttribute="top" secondItem="iGr-Vn-bpw" secondAttribute="bottom" constant="18" id="puV-gw-VQx"/>
+                    <constraint firstAttribute="trailing" secondItem="w8V-Kz-lN3" secondAttribute="trailing" constant="43" id="seM-sy-sRV"/>
+                    <constraint firstAttribute="trailing" secondItem="tSX-tF-8xS" secondAttribute="trailing" constant="43" id="uvq-dP-k6B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92556051327382716" green="0.92878226424212929" blue="0.90128061987099972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="beforeTaxField" destination="iGr-Vn-bpw" id="wMu-1m-RLK"/>
+                <outlet property="descriptionField" destination="tSX-tF-8xS" id="1rm-eW-DHU"/>
+            </connections>
+            <point key="canvasLocation" x="-223" y="33"/>
+        </tableViewCell>
+    </objects>
+</document>

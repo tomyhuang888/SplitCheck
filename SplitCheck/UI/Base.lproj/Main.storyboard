@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Bv5-pr-SUC">
+                                <rect key="frame" x="16" y="206" width="343" height="441"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TLy-xv-jlX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="57H-0Z-Arh"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpU-8G-Bz0">
+                                <rect key="frame" x="138" y="43" width="60" height="30"/>
+                                <state key="normal" title="Add One"/>
+                                <connections>
+                                    <action selector="addOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yv-4D-x6I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-kl-YAN">
+                                <rect key="frame" x="228" y="43" width="76" height="30"/>
+                                <state key="normal" title="Remove All"/>
+                                <connections>
+                                    <action selector="removeAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyn-xW-jco"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UWS-kl-YAN" secondAttribute="trailing" constant="66" id="Ax7-hJ-MLh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bv5-pr-SUC" secondAttribute="trailing" constant="16" id="WIQ-30-7Is"/>
+                            <constraint firstItem="Bv5-pr-SUC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ybm-FO-wLH"/>
+                            <constraint firstItem="UWS-kl-YAN" firstAttribute="leading" secondItem="HpU-8G-Bz0" secondAttribute="trailing" constant="24" id="aZw-bB-Ogo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bv5-pr-SUC" secondAttribute="bottom" constant="20" id="c7D-Pg-j2v"/>
+                            <constraint firstItem="UWS-kl-YAN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="lO8-f4-hkg"/>
+                            <constraint firstItem="Bv5-pr-SUC" firstAttribute="top" secondItem="HpU-8G-Bz0" secondAttribute="bottom" constant="133" id="ulW-VZ-uFY"/>
+                            <constraint firstItem="HpU-8G-Bz0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="x2u-2o-6I3"/>
+                            <constraint firstItem="HpU-8G-Bz0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="yO8-rW-N4m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scTableView" destination="Bv5-pr-SUC" id="WZD-xZ-vgv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
